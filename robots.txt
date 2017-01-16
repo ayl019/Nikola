@@ -1,4 +1,4 @@
-Sitemap: https://ayl019.github.io/Nikola/sitemapindex.xml
+Sitemap: https://ayl019.github.io/sitemapindex.xml
 
 User-Agent: *
 Host: ayl019.github.io
