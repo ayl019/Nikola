@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Andy's Data Blog</title><link>https://ayl019.github.io/</link><description>This site contains projects that I have done or currently working on</description><atom:link rel="self" href="https://ayl019.github.io/rss.xml" type="application/rss+xml"></atom:link><language>en</language><lastBuildDate>Mon, 16 Jan 2017 21:35:08 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>LAPD Crime Data Analysis</title><link>https://ayl019.github.io/posts/lapd-crime-data-analysis/</link><dc:creator>Andy Lin</dc:creator><description>&lt;div tabindex="-1" id="notebook" class="border-box-sizing"&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Andy's Data Blog</title><link>https://ayl019.github.io/Nikola/</link><description>This site contains projects that I have done or currently working on</description><atom:link type="application/rss+xml" href="https://ayl019.github.io/Nikola/rss.xml" rel="self"></atom:link><language>en</language><lastBuildDate>Mon, 16 Jan 2017 21:40:02 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>LAPD Crime Data Analysis</title><link>https://ayl019.github.io/Nikola/posts/lapd-crime-data-analysis/</link><dc:creator>Andy Lin</dc:creator><description>&lt;div tabindex="-1" id="notebook" class="border-box-sizing"&gt;
     &lt;div class="container" id="notebook-container"&gt;
 
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;
@@ -7,7 +7,7 @@
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h2 id="Introduction"&gt;Introduction&lt;a class="anchor-link" href="https://ayl019.github.io/posts/lapd-crime-data-analysis/#Introduction"&gt;¶&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;The Los Angeles Police Department(LAPD) is responsible for the protection and safeguard of the City of Los Angeles. While the LAPD has been attempting to reduce crime each year, it is a difficult goal to achieve due to growing population and only fewer than 10000 active officers in the department. However, an analysis of the LAPD historical crime record can provide a better view of crime trends and allow the LAPD to allocate resources accordingly.&lt;/p&gt;
+&lt;h2 id="Introduction"&gt;Introduction&lt;a class="anchor-link" href="https://ayl019.github.io/Nikola/posts/lapd-crime-data-analysis/#Introduction"&gt;¶&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;The Los Angeles Police Department(LAPD) is responsible for the protection and safeguard of the City of Los Angeles. While the LAPD has been attempting to reduce crime each year, it is a difficult goal to achieve due to growing population and only fewer than 10000 active officers in the department. However, an analysis of the LAPD historical crime record can provide a better view of crime trends and allow the LAPD to allocate resources accordingly.&lt;/p&gt;
 &lt;p&gt;In this post the analysis will be conducted using Jupyter Notebook and the primary dataset contains information regarding  arrest incidents conducted by LAPD in the year of 2015.&lt;/p&gt;
 
 &lt;/div&gt;
@@ -18,7 +18,7 @@
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h2 id="The-Dataset"&gt;The Dataset&lt;a class="anchor-link" href="https://ayl019.github.io/posts/lapd-crime-data-analysis/#The-Dataset"&gt;¶&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;The dataset used in this analysis belongs to Los Angeles Police Department. Below is the link to the dataset that will be used:&lt;/p&gt;
+&lt;h2 id="The-Dataset"&gt;The Dataset&lt;a class="anchor-link" href="https://ayl019.github.io/Nikola/posts/lapd-crime-data-analysis/#The-Dataset"&gt;¶&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;The dataset used in this analysis belongs to Los Angeles Police Department. Below is the link to the dataset that will be used:&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://data.lacity.org/A-Safe-City/Open-Data-ARR-2015/d4vt-ypi8/data"&gt;Open Data ARR 2015&lt;/a&gt; (Arrests made in the City of Los Angeles)&lt;/p&gt;
 &lt;p&gt;There are also other datasets with information such as crime reports and call for services received by LAPD, but these datasets do not contain crucial elements that are needed for the analysis.&lt;/p&gt;
 
@@ -30,7 +30,7 @@
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h2 id="Background-Information"&gt;Background Information&lt;a class="anchor-link" href="https://ayl019.github.io/posts/lapd-crime-data-analysis/#Background-Information"&gt;¶&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;h2 id="Background-Information"&gt;Background Information&lt;a class="anchor-link" href="https://ayl019.github.io/Nikola/posts/lapd-crime-data-analysis/#Background-Information"&gt;¶&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;The City of Los Angeles is divided into 21 areas by LAPD&lt;/li&gt;
 &lt;li&gt;Each area consists of numerous reporting districts(RD)&lt;/li&gt;
 &lt;li&gt;There are 1135 reporting districts, a unique number ranging from 101 to 2199 is assigned to each reporting district&lt;/li&gt;
@@ -44,7 +44,7 @@
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h2 id="Examine-the-dataset"&gt;Examine the dataset&lt;a class="anchor-link" href="https://ayl019.github.io/posts/lapd-crime-data-analysis/#Examine-the-dataset"&gt;¶&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Now begin loading the dataset and some packages into Jupyter Notebook. In this case the dataset will be called "Arrest"&lt;/p&gt;
+&lt;h2 id="Examine-the-dataset"&gt;Examine the dataset&lt;a class="anchor-link" href="https://ayl019.github.io/Nikola/posts/lapd-crime-data-analysis/#Examine-the-dataset"&gt;¶&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Now begin loading the dataset and some packages into Jupyter Notebook. In this case the dataset will be called "Arrest"&lt;/p&gt;
 
 &lt;/div&gt;
 &lt;/div&gt;
@@ -272,7 +272,7 @@
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h2 id="Clean-the-dataset"&gt;Clean the dataset&lt;a class="anchor-link" href="https://ayl019.github.io/posts/lapd-crime-data-analysis/#Clean-the-dataset"&gt;¶&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;There are total 126854 entries in the dataset. Entries with reporting district(RD) that is not between 101 and 2199 should be removed.&lt;/p&gt;
+&lt;h2 id="Clean-the-dataset"&gt;Clean the dataset&lt;a class="anchor-link" href="https://ayl019.github.io/Nikola/posts/lapd-crime-data-analysis/#Clean-the-dataset"&gt;¶&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;There are total 126854 entries in the dataset. Entries with reporting district(RD) that is not between 101 and 2199 should be removed.&lt;/p&gt;
 
 &lt;/div&gt;
 &lt;/div&gt;
@@ -648,7 +648,7 @@
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h2 id="Age-vs-Crime"&gt;Age vs Crime&lt;a class="anchor-link" href="https://ayl019.github.io/posts/lapd-crime-data-analysis/#Age-vs-Crime"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id="Age-vs-Crime"&gt;Age vs Crime&lt;a class="anchor-link" href="https://ayl019.github.io/Nikola/posts/lapd-crime-data-analysis/#Age-vs-Crime"&gt;¶&lt;/a&gt;&lt;/h2&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -885,7 +885,7 @@ Name: AGE, dtype: float64&lt;/pre&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h3 id="Five-Categories-of-Crimes"&gt;Five Categories of Crimes&lt;a class="anchor-link" href="https://ayl019.github.io/posts/lapd-crime-data-analysis/#Five-Categories-of-Crimes"&gt;¶&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;The criminal systems in most states divide crimes into several categories, usually depending on how serious the crimes are. This categorization allows the court to determine how to treat each particular case. In this dataset, there are five main categories that a crime can be assigned into and the categoization of each arrest is indicated in "ARST_TYP_CD".&lt;/p&gt;
+&lt;h3 id="Five-Categories-of-Crimes"&gt;Five Categories of Crimes&lt;a class="anchor-link" href="https://ayl019.github.io/Nikola/posts/lapd-crime-data-analysis/#Five-Categories-of-Crimes"&gt;¶&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;The criminal systems in most states divide crimes into several categories, usually depending on how serious the crimes are. This categorization allows the court to determine how to treat each particular case. In this dataset, there are five main categories that a crime can be assigned into and the categoization of each arrest is indicated in "ARST_TYP_CD".&lt;/p&gt;
 &lt;p&gt;The five categories are defined as the following:&lt;/p&gt;
 
 &lt;/div&gt;
@@ -981,7 +981,7 @@ Name: AGE, dtype: float64&lt;/pre&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h3 id="Types-of-Crime"&gt;Types of Crime&lt;a class="anchor-link" href="https://ayl019.github.io/posts/lapd-crime-data-analysis/#Types-of-Crime"&gt;¶&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Each crime is assigned a charge code("CHRG_GRP_CD") ranging from 1 to 27 with a category and description. Entries with no crime code have already been removed while cleaning the dataset, and the calculation below shows that about 11.4% of arrests were made without specific crime code.&lt;/p&gt;
+&lt;h3 id="Types-of-Crime"&gt;Types of Crime&lt;a class="anchor-link" href="https://ayl019.github.io/Nikola/posts/lapd-crime-data-analysis/#Types-of-Crime"&gt;¶&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Each crime is assigned a charge code("CHRG_GRP_CD") ranging from 1 to 27 with a category and description. Entries with no crime code have already been removed while cleaning the dataset, and the calculation below shows that about 11.4% of arrests were made without specific crime code.&lt;/p&gt;
 
 &lt;/div&gt;
 &lt;/div&gt;
@@ -2865,7 +2865,7 @@ Name: AGE, dtype: float64&lt;/pre&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h3 id="Time-vs-Crime"&gt;Time vs Crime&lt;a class="anchor-link" href="https://ayl019.github.io/posts/lapd-crime-data-analysis/#Time-vs-Crime"&gt;¶&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;It is also expected that crime frequencies are related to time. Intuitively, Burglary, Larceny, and Moving Traffic Violations should occur more often during working hours, while Prostitution and Rape occur more often during midnight. The crime types are divided into three different groups according to proportion and therefore three plots will be shown.&lt;/p&gt;
+&lt;h3 id="Time-vs-Crime"&gt;Time vs Crime&lt;a class="anchor-link" href="https://ayl019.github.io/Nikola/posts/lapd-crime-data-analysis/#Time-vs-Crime"&gt;¶&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;It is also expected that crime frequencies are related to time. Intuitively, Burglary, Larceny, and Moving Traffic Violations should occur more often during working hours, while Prostitution and Rape occur more often during midnight. The crime types are divided into three different groups according to proportion and therefore three plots will be shown.&lt;/p&gt;
 
 &lt;/div&gt;
 &lt;/div&gt;
@@ -3197,7 +3197,7 @@ Memorial Day, and Labor Day are considered in this case and it is founded that t
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h2 id="US-Census"&gt;US Census&lt;a class="anchor-link" href="https://ayl019.github.io/posts/lapd-crime-data-analysis/#US-Census"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id="US-Census"&gt;US Census&lt;a class="anchor-link" href="https://ayl019.github.io/Nikola/posts/lapd-crime-data-analysis/#US-Census"&gt;¶&lt;/a&gt;&lt;/h2&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -4073,7 +4073,7 @@ For every 1000 ethnic Whites, there are about 17.8 arrests.
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h2 id="Wrap-Up"&gt;Wrap Up&lt;a class="anchor-link" href="https://ayl019.github.io/posts/lapd-crime-data-analysis/#Wrap-Up"&gt;¶&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;It is no secret that young people are much more likely to commit crimes, since people who are between 24 to 45 years old are responsible for half of the total crimes. Each arrest incident should be assigned a crime code for justification purposes, the fact that approximately 11% of arrests were made without proper description is something to be concerned about.&lt;/p&gt;
+&lt;h2 id="Wrap-Up"&gt;Wrap Up&lt;a class="anchor-link" href="https://ayl019.github.io/Nikola/posts/lapd-crime-data-analysis/#Wrap-Up"&gt;¶&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;It is no secret that young people are much more likely to commit crimes, since people who are between 24 to 45 years old are responsible for half of the total crimes. Each arrest incident should be assigned a crime code for justification purposes, the fact that approximately 11% of arrests were made without proper description is something to be concerned about.&lt;/p&gt;
 &lt;p&gt;For most crime types, both the Linear and Poisson models suggest decreases in frequency over the year, except for Aggravated Assault, Vehicle Theft, Other Assaults, Against Family/Child, and Disorderly Conduct. Despite each crime has its own trend, day of the week is an excellent predictor for crime counts. Certain crimes such as Robbery and Burglary tend to happen on weekdays, while Distrubing the Peace and Driving Under Influence tend to happen on weekends.&lt;/p&gt;
 &lt;p&gt;Many of the crimes have a much larger male counts, but females are more likely to be arrested for Prostitution/Allied and Non-criminal Detention. Each ethnicity has varying crime frequency trends, but it is reasonable to claim that people of certain ethnicity are more likely to commit certain crimes than people of other ethnicities.&lt;/p&gt;
 
@@ -4082,7 +4082,7 @@ For every 1000 ethnic Whites, there are about 17.8 arrests.
 &lt;/div&gt;
     &lt;/div&gt;
   &lt;/div&gt;
-</description><guid>https://ayl019.github.io/posts/lapd-crime-data-analysis/</guid><pubDate>Mon, 16 Jan 2017 21:35:00 GMT</pubDate></item><item><title>Predict The Survival of Titanic Passengers</title><link>https://ayl019.github.io/posts/predict-the-survival-of-titanic-passengers/</link><dc:creator>Andy Lin</dc:creator><description>&lt;div tabindex="-1" id="notebook" class="border-box-sizing"&gt;
+</description><guid>https://ayl019.github.io/Nikola/posts/lapd-crime-data-analysis/</guid><pubDate>Mon, 16 Jan 2017 21:35:00 GMT</pubDate></item><item><title>Predict The Survival of Titanic Passengers</title><link>https://ayl019.github.io/Nikola/posts/predict-the-survival-of-titanic-passengers/</link><dc:creator>Andy Lin</dc:creator><description>&lt;div tabindex="-1" id="notebook" class="border-box-sizing"&gt;
     &lt;div class="container" id="notebook-container"&gt;
 
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;
@@ -4396,4 +4396,4 @@ $(document).ready(function () {
 &lt;/div&gt;
     &lt;/div&gt;
   &lt;/div&gt;
-</description><guid>https://ayl019.github.io/posts/predict-the-survival-of-titanic-passengers/</guid><pubDate>Mon, 16 Jan 2017 06:41:13 GMT</pubDate></item></channel></rss>
+</description><guid>https://ayl019.github.io/Nikola/posts/predict-the-survival-of-titanic-passengers/</guid><pubDate>Mon, 16 Jan 2017 06:41:13 GMT</pubDate></item></channel></rss>
