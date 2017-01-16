@@ -21,10 +21,10 @@ BLOG_AUTHOR = "Andy Lin"  # (translatable)
 BLOG_TITLE = "Andy's Data Blog"  # (translatable)
 # This is the main URL for your site. It will be used
 # in a prominent link. Don't forget the protocol (http/https)!
-SITE_URL = "https://ayl019.github.io/"
+SITE_URL = "https://ayl019.github.io/Nikola/"
 # This is the URL where Nikola's output will be deployed.
 # If not set, defaults to SITE_URL
-# BASE_URL = "https://ayl019.github.io/"
+# BASE_URL = "https://ayl019.github.io/Nikola/"
 BLOG_EMAIL = "linyushan2012@gmail.com"
 BLOG_DESCRIPTION = "This site contains projects that I have done or currently working on"  # (translatable)
 
@@ -1240,7 +1240,9 @@ UNSLUGIFY_TITLES = True
 
 # Put in global_context things you want available on all your templates.
 # It can be anything, data, functions, modules, etc.
-GLOBAL_CONTEXT = {}
+GLOBAL_CONTEXT = {
+        "hyde_subtheme": "theme-base-08"
+}
 
 # Add functions here and they will be called with template
 # GLOBAL_CONTEXT as parameter when the template is about to be
