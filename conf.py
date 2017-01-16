@@ -18,13 +18,13 @@ import time
 
 # Data about this site
 BLOG_AUTHOR = "Andy Lin"  # (translatable)
-BLOG_TITLE = "Data Analysis/Science Blog"  # (translatable)
+BLOG_TITLE = "Andy's Data Blog"  # (translatable)
 # This is the main URL for your site. It will be used
 # in a prominent link. Don't forget the protocol (http/https)!
-SITE_URL = "https://ayl019.github.io/Nikola/"
+SITE_URL = "https://ayl019.github.io/"
 # This is the URL where Nikola's output will be deployed.
 # If not set, defaults to SITE_URL
-# BASE_URL = "https://ayl019.github.io/Nikola/"
+# BASE_URL = "https://ayl019.github.io/"
 BLOG_EMAIL = "linyushan2012@gmail.com"
 BLOG_DESCRIPTION = "This site contains projects that I have done or currently working on"  # (translatable)
 
