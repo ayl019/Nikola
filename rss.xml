@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Andy's Data Blog</title><link>https://ayl019.github.io/Nikola/</link><description>This site contains projects that I have done or currently working on</description><atom:link type="application/rss+xml" href="https://ayl019.github.io/Nikola/rss.xml" rel="self"></atom:link><language>en</language><lastBuildDate>Mon, 16 Jan 2017 21:40:02 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>LAPD Crime Data Analysis</title><link>https://ayl019.github.io/Nikola/posts/lapd-crime-data-analysis/</link><dc:creator>Andy Lin</dc:creator><description>&lt;div tabindex="-1" id="notebook" class="border-box-sizing"&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Andy's Data Blog</title><link>https://ayl019.github.io/Nikola/</link><description>This site contains projects that I have done or currently working on</description><atom:link href="https://ayl019.github.io/Nikola/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><lastBuildDate>Mon, 16 Jan 2017 21:57:20 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>LAPD Crime Data Analysis</title><link>https://ayl019.github.io/Nikola/posts/lapd-crime-data-analysis/</link><dc:creator>Andy Lin</dc:creator><description>&lt;div tabindex="-1" id="notebook" class="border-box-sizing"&gt;
     &lt;div class="container" id="notebook-container"&gt;
 
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;
@@ -51,7 +51,7 @@
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [1]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In [2]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
     &lt;div class="input_area"&gt;
 &lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="k"&gt;matplotlib&lt;/span&gt; inline
@@ -87,7 +87,7 @@
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [2]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In [5]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
     &lt;div class="input_area"&gt;
 &lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;Arrest&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;head&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
@@ -101,7 +101,7 @@
 &lt;div class="output"&gt;
 
 
-&lt;div class="output_area"&gt;&lt;div class="prompt output_prompt"&gt;Out[2]:&lt;/div&gt;
+&lt;div class="output_area"&gt;&lt;div class="prompt output_prompt"&gt;Out[5]:&lt;/div&gt;
 
 &lt;div class="output_html rendered_html output_subarea output_execute_result"&gt;
 &lt;div&gt;
@@ -245,7 +245,7 @@
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;After examining each column and searching for essential information online, the followings are the definitions for each column:&lt;/p&gt;
+&lt;p&gt;After examining each variable and searching for essential information online, the followings are how each variable will be defined:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;"ARST DATE" is the date when each arrest occurred&lt;/li&gt;
 &lt;li&gt;"TIME" is recorded in 24-hour time, ranging from 0 to 2400&lt;/li&gt;
@@ -295,7 +295,7 @@
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;Fortunately, there is no null entires in "AGE", and the only columns containing null entries are "CHRG_GRP_CD",  "CHRG_DESC" and "TIME". To deal with null entries in numerical data such as age or height, it is sufficient to replace them with average age of that specific area, given that the number of null entries is not very large. Predictive algorithms such as linear regression and random forest can also be used to fill the null entries, simply use the portion of dataset containing valid age information to train the model for prediction.&lt;/p&gt;
+&lt;p&gt;Fortunately, there is no null entires in "AGE", and the only variables containing null entries are "CHRG_GRP_CD",  "CHRG_DESC" and "TIME". To deal with null entries in numerical data such as age or height, it is sufficient to replace them with average age of that specific area, given that the number of null entries is not very large. Predictive algorithms such as linear regression and random forest can also be used to fill the null entries, simply use the portion of dataset containing valid age information to train the model for prediction.&lt;/p&gt;
 
 &lt;/div&gt;
 &lt;/div&gt;
@@ -416,7 +416,7 @@
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;Next convert the date in all the entries into a new column "DayOfWeek"(0 = Monday, 1 = Tuesday, 2 = Wednesday and so on).&lt;/p&gt;
+&lt;p&gt;Next convert the date in all the entries into a new variable "DayOfWeek"(0 = Monday, 1 = Tuesday, 2 = Wednesday and so on).&lt;/p&gt;
 
 &lt;/div&gt;
 &lt;/div&gt;
@@ -598,7 +598,7 @@
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;The Location 1 columns represents the latitude and longitude where each incident takes place. There are approximately 5% of the entries are missing in this column, and these missing values are entered as (0, 0) or (0.0000, 0.0000).&lt;/p&gt;
+&lt;p&gt;The Location 1 variable represents the latitude and longitude where each incident takes place. There are approximately 5% of the entries are missing in this variable, and these missing values are entered as (0, 0) or (0.0000, 0.0000).&lt;/p&gt;
 
 &lt;/div&gt;
 &lt;/div&gt;
@@ -638,7 +638,7 @@
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;There was an attempt to use Python packages such as Geopy and other geocoding API to reverse geocoding the latitude and longitude in "Location 1" into corresponding zip code. However, with 20537 unique latitude and longitude combinations to reverse geocoding, it would take days given no network error to finish the conversion due to the query limit on the Geopy package and web API. It is unfortunate but the columns containing geographical information will not be utilized.&lt;/p&gt;
+&lt;p&gt;There was an attempt to use Python packages such as Geopy and other geocoding API to reverse geocoding the latitude and longitude in "Location 1" into corresponding zip code. However, with 20537 unique latitude and longitude combinations to reverse geocoding, it would take days given no network error to finish the conversion due to the query limit on the Geopy package and web API. It is unfortunate but the variables containing geographical information will not be utilized.&lt;/p&gt;
 
 &lt;/div&gt;
 &lt;/div&gt;
@@ -885,7 +885,7 @@ Name: AGE, dtype: float64&lt;/pre&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h3 id="Five-Categories-of-Crimes"&gt;Five Categories of Crimes&lt;a class="anchor-link" href="https://ayl019.github.io/Nikola/posts/lapd-crime-data-analysis/#Five-Categories-of-Crimes"&gt;¶&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;The criminal systems in most states divide crimes into several categories, usually depending on how serious the crimes are. This categorization allows the court to determine how to treat each particular case. In this dataset, there are five main categories that a crime can be assigned into and the categoization of each arrest is indicated in "ARST_TYP_CD".&lt;/p&gt;
+&lt;h2 id="Five-Categories-of-Crimes"&gt;Five Categories of Crimes&lt;a class="anchor-link" href="https://ayl019.github.io/Nikola/posts/lapd-crime-data-analysis/#Five-Categories-of-Crimes"&gt;¶&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;The criminal systems in most states divide crimes into several categories, usually depending on how serious the crimes are. This categorization allows the court to determine how to treat each particular case. In this dataset, there are five main categories that a crime can be assigned into and the categoization of each arrest is indicated in "ARST_TYP_CD".&lt;/p&gt;
 &lt;p&gt;The five categories are defined as the following:&lt;/p&gt;
 
 &lt;/div&gt;
@@ -981,7 +981,7 @@ Name: AGE, dtype: float64&lt;/pre&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h3 id="Types-of-Crime"&gt;Types of Crime&lt;a class="anchor-link" href="https://ayl019.github.io/Nikola/posts/lapd-crime-data-analysis/#Types-of-Crime"&gt;¶&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Each crime is assigned a charge code("CHRG_GRP_CD") ranging from 1 to 27 with a category and description. Entries with no crime code have already been removed while cleaning the dataset, and the calculation below shows that about 11.4% of arrests were made without specific crime code.&lt;/p&gt;
+&lt;h2 id="Types-of-Crime"&gt;Types of Crime&lt;a class="anchor-link" href="https://ayl019.github.io/Nikola/posts/lapd-crime-data-analysis/#Types-of-Crime"&gt;¶&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Each crime is assigned a charge code("CHRG_GRP_CD") ranging from 1 to 27 with a category and description. Entries with no crime code have already been removed while cleaning the dataset, and the calculation below shows that about 11.4% of arrests were made without specific crime code.&lt;/p&gt;
 
 &lt;/div&gt;
 &lt;/div&gt;
@@ -1330,7 +1330,7 @@ Name: AGE, dtype: float64&lt;/pre&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;Now it is possible to examine the trends of each crime type in City of Los Angeles over the year by fitting a linear regression model. To do so it would require a new dataframe containing 365 rows(representing 365 days) with counts of each crime type and  a total count of crimes in each day. A new column "DayOfWeek" is added for the other part of the analysis and the new dataframe will be named "LR".&lt;/p&gt;
+&lt;p&gt;Now it is possible to examine the trends of each crime type in City of Los Angeles over the year by fitting a linear regression model. To do so it would require a new dataframe containing 365 rows(representing 365 days) with counts of each crime type and  a total count of crimes in each day. A new variable "DayOfWeek" is added for the other part of the analysis and the new dataframe will be named "LR".&lt;/p&gt;
 
 &lt;/div&gt;
 &lt;/div&gt;
@@ -1984,7 +1984,7 @@ Name: AGE, dtype: float64&lt;/pre&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;Now consider using day of the week to estimate counts for each crime type, so it becomes the problem of dealing with more than two categorical predictors/features. To represent day of the week, six dummy variables are sufficient to capture all the necessary information(Generally k-1 dummy variables are needed for k predictors/features). Any row with a value of 0(False) in the six dummy columns will be Sunday.&lt;/p&gt;
+&lt;p&gt;Now consider using day of the week to estimate counts for each crime type, so it becomes the problem of dealing with more than two categorical predictors/features. To represent day of the week, six dummy variables are sufficient to capture all the necessary information(Generally k-1 dummy variables are needed for k predictors/features). Any row with a value of 0(False) in all six dummy variables will be Sunday.&lt;/p&gt;
 
 &lt;/div&gt;
 &lt;/div&gt;
@@ -2865,7 +2865,7 @@ Name: AGE, dtype: float64&lt;/pre&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h3 id="Time-vs-Crime"&gt;Time vs Crime&lt;a class="anchor-link" href="https://ayl019.github.io/Nikola/posts/lapd-crime-data-analysis/#Time-vs-Crime"&gt;¶&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;It is also expected that crime frequencies are related to time. Intuitively, Burglary, Larceny, and Moving Traffic Violations should occur more often during working hours, while Prostitution and Rape occur more often during midnight. The crime types are divided into three different groups according to proportion and therefore three plots will be shown.&lt;/p&gt;
+&lt;h2 id="Time-vs-Crime"&gt;Time vs Crime&lt;a class="anchor-link" href="https://ayl019.github.io/Nikola/posts/lapd-crime-data-analysis/#Time-vs-Crime"&gt;¶&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;It is also expected that crime frequencies are related to time. Intuitively, Burglary, Larceny, and Moving Traffic Violations should occur more often during working hours, while Prostitution and Rape occur more often during midnight. The crime types are divided into three different groups according to proportion and therefore three plots will be shown.&lt;/p&gt;
 
 &lt;/div&gt;
 &lt;/div&gt;
@@ -4082,7 +4082,7 @@ For every 1000 ethnic Whites, there are about 17.8 arrests.
 &lt;/div&gt;
     &lt;/div&gt;
   &lt;/div&gt;
-</description><guid>https://ayl019.github.io/Nikola/posts/lapd-crime-data-analysis/</guid><pubDate>Mon, 16 Jan 2017 21:35:00 GMT</pubDate></item><item><title>Predict The Survival of Titanic Passengers</title><link>https://ayl019.github.io/Nikola/posts/predict-the-survival-of-titanic-passengers/</link><dc:creator>Andy Lin</dc:creator><description>&lt;div tabindex="-1" id="notebook" class="border-box-sizing"&gt;
+</description><guid>https://ayl019.github.io/Nikola/posts/lapd-crime-data-analysis/</guid><pubDate>Mon, 16 Jan 2017 21:57:14 GMT</pubDate></item><item><title>Predict The Survival of Titanic Passengers</title><link>https://ayl019.github.io/Nikola/posts/predict-the-survival-of-titanic-passengers/</link><dc:creator>Andy Lin</dc:creator><description>&lt;div tabindex="-1" id="notebook" class="border-box-sizing"&gt;
     &lt;div class="container" id="notebook-container"&gt;
 
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;
