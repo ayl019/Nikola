@@ -11795,7 +11795,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">%</span><span class="k">matplotlib</span> inline
@@ -11831,7 +11831,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">Arrest</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
@@ -11845,7 +11845,7 @@ div#notebook {
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[2]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[5]:</div>
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 <div>
@@ -11989,7 +11989,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>After examining each column and searching for essential information online, the followings are the definitions for each column:</p>
+<p>After examining each variable and searching for essential information online, the followings are how each variable will be defined:</p>
 <ul>
 <li>"ARST DATE" is the date when each arrest occurred</li>
 <li>"TIME" is recorded in 24-hour time, ranging from 0 to 2400</li>
@@ -12039,7 +12039,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Fortunately, there is no null entires in "AGE", and the only columns containing null entries are "CHRG_GRP_CD",  "CHRG_DESC" and "TIME". To deal with null entries in numerical data such as age or height, it is sufficient to replace them with average age of that specific area, given that the number of null entries is not very large. Predictive algorithms such as linear regression and random forest can also be used to fill the null entries, simply use the portion of dataset containing valid age information to train the model for prediction.</p>
+<p>Fortunately, there is no null entires in "AGE", and the only variables containing null entries are "CHRG_GRP_CD",  "CHRG_DESC" and "TIME". To deal with null entries in numerical data such as age or height, it is sufficient to replace them with average age of that specific area, given that the number of null entries is not very large. Predictive algorithms such as linear regression and random forest can also be used to fill the null entries, simply use the portion of dataset containing valid age information to train the model for prediction.</p>
 
 </div>
 </div>
@@ -12160,7 +12160,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Next convert the date in all the entries into a new column "DayOfWeek"(0 = Monday, 1 = Tuesday, 2 = Wednesday and so on).</p>
+<p>Next convert the date in all the entries into a new variable "DayOfWeek"(0 = Monday, 1 = Tuesday, 2 = Wednesday and so on).</p>
 
 </div>
 </div>
@@ -12342,7 +12342,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>The Location 1 columns represents the latitude and longitude where each incident takes place. There are approximately 5% of the entries are missing in this column, and these missing values are entered as (0, 0) or (0.0000, 0.0000).</p>
+<p>The Location 1 variable represents the latitude and longitude where each incident takes place. There are approximately 5% of the entries are missing in this variable, and these missing values are entered as (0, 0) or (0.0000, 0.0000).</p>
 
 </div>
 </div>
@@ -12382,7 +12382,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>There was an attempt to use Python packages such as Geopy and other geocoding API to reverse geocoding the latitude and longitude in "Location 1" into corresponding zip code. However, with 20537 unique latitude and longitude combinations to reverse geocoding, it would take days given no network error to finish the conversion due to the query limit on the Geopy package and web API. It is unfortunate but the columns containing geographical information will not be utilized.</p>
+<p>There was an attempt to use Python packages such as Geopy and other geocoding API to reverse geocoding the latitude and longitude in "Location 1" into corresponding zip code. However, with 20537 unique latitude and longitude combinations to reverse geocoding, it would take days given no network error to finish the conversion due to the query limit on the Geopy package and web API. It is unfortunate but the variables containing geographical information will not be utilized.</p>
 
 </div>
 </div>
@@ -13703,7 +13703,7 @@ ERHJiooIERERyYqKCBEREcmKiggRERHJyv8AbTQk/HfTyEQAAAAASUVORK5CYII=
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Five-Categories-of-Crimes">Five Categories of Crimes<a class="anchor-link" href="#Five-Categories-of-Crimes">&#182;</a></h2><p>The criminal systems in most states divide crimes into several categories, usually depending on how serious the crimes are. This categorization allows the court to determine how to treat each particular case. In this dataset, there are five main categories that a crime can be assigned into and the categoization of each arrest is indicated in "ARST_TYP_CD".</p>
+<h1 id="Five-Categories-of-Crimes">Five Categories of Crimes<a class="anchor-link" href="#Five-Categories-of-Crimes">&#182;</a></h1><p>The criminal systems in most states divide crimes into several categories, usually depending on how serious the crimes are. This categorization allows the court to determine how to treat each particular case. In this dataset, there are five main categories that a crime can be assigned into and the categoization of each arrest is indicated in "ARST_TYP_CD".</p>
 <p>The five categories are defined as the following:</p>
 
 </div>
@@ -14045,7 +14045,7 @@ Sb32/wHbJ5j5o9GMNgAAAABJRU5ErkJggg==
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Types-of-Crime">Types of Crime<a class="anchor-link" href="#Types-of-Crime">&#182;</a></h2><p>Each crime is assigned a charge code("CHRG_GRP_CD") ranging from 1 to 27 with a category and description. Entries with no crime code have already been removed while cleaning the dataset, and the calculation below shows that about 11.4% of arrests were made without specific crime code.</p>
+<h1 id="Types-of-Crime">Types of Crime<a class="anchor-link" href="#Types-of-Crime">&#182;</a></h1><p>Each crime is assigned a charge code("CHRG_GRP_CD") ranging from 1 to 27 with a category and description. Entries with no crime code have already been removed while cleaning the dataset, and the calculation below shows that about 11.4% of arrests were made without specific crime code.</p>
 
 </div>
 </div>
@@ -14859,7 +14859,7 @@ D5n0Tpe9QnBdAAAAAElFTkSuQmCC
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Now it is possible to examine the trends of each crime type in City of Los Angeles over the year by fitting a linear regression model. To do so it would require a new dataframe containing 365 rows(representing 365 days) with counts of each crime type and  a total count of crimes in each day. A new column "DayOfWeek" is added for the other part of the analysis and the new dataframe will be named "LR".</p>
+<p>Now it is possible to examine the trends of each crime type in City of Los Angeles over the year by fitting a linear regression model. To do so it would require a new dataframe containing 365 rows(representing 365 days) with counts of each crime type and  a total count of crimes in each day. A new variable "DayOfWeek" is added for the other part of the analysis and the new dataframe will be named "LR".</p>
 
 </div>
 </div>
@@ -16023,7 +16023,7 @@ xiRJkqTKGJiaXEmSJKlVJrmSJEmqHJNcSZIkVY5JriRJkirHJFeSJEmVY5IrSZKkyjHJlSRJUuWY
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Now consider using day of the week to estimate counts for each crime type, so it becomes the problem of dealing with more than two categorical predictors/features. To represent day of the week, six dummy variables are sufficient to capture all the necessary information(Generally k-1 dummy variables are needed for k predictors/features). Any row with a value of 0(False) in the six dummy columns will be Sunday.</p>
+<p>Now consider using day of the week to estimate counts for each crime type, so it becomes the problem of dealing with more than two categorical predictors/features. To represent day of the week, six dummy variables are sufficient to capture all the necessary information(Generally k-1 dummy variables are needed for k predictors/features). Any row with a value of 0(False) in all six dummy variables will be Sunday.</p>
 
 </div>
 </div>
@@ -21705,7 +21705,7 @@ SZKkHP4/KoDOc44oWWwAAAAASUVORK5CYII=
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Time-vs-Crime">Time vs Crime<a class="anchor-link" href="#Time-vs-Crime">&#182;</a></h2><p>It is also expected that crime frequencies are related to time. Intuitively, Burglary, Larceny, and Moving Traffic Violations should occur more often during working hours, while Prostitution and Rape occur more often during midnight. The crime types are divided into three different groups according to proportion and therefore three plots will be shown.</p>
+<h1 id="Time-vs-Crime">Time vs Crime<a class="anchor-link" href="#Time-vs-Crime">&#182;</a></h1><p>It is also expected that crime frequencies are related to time. Intuitively, Burglary, Larceny, and Moving Traffic Violations should occur more often during working hours, while Prostitution and Rape occur more often during midnight. The crime types are divided into three different groups according to proportion and therefore three plots will be shown.</p>
 
 </div>
 </div>
